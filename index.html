@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        #astha{
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
+
+    <div id="astha"></div>
+
+    <script>
+        pannellum.viewer('astha',{
+            default:{
+                firstScene: "scene3",
+                autoLoad: true,
+                autoRotate:-2,
+                showControls: false,
+            },
+            scenes:{
+                scene1:{
+                    title:"bedroom",
+                    type:"equirectangular",
+                    panorama:"bedroom.webp",
+                    hotSpots:[
+                        {
+                            pitch : 6,
+                            yaw : 0,
+                            createTooltipFunc: customHotspot,
+                            createTooltipArgs:{
+                                icon:"cupboard.png",
+                                text:"cupboard",
+                                URL:"https://www.flipkart.com/q/cupboards"
+                            }
+                        },
+                        {
+                            pitch:5,
+                            yaw:-35,
+                            createTooltipFunc: customHotspot,
+                            createTooltipArgs:{
+                                icon:"television.png",
+                                text:"television",
+                                URL:"https://en.wikipedia.org/wiki/Television"
+                            }
+                        },
+                        {
+                            pitch:0,
+                            yaw:40,
+                            createTooltipFunc: customHotspot,
+                            createTooltipArgs:{
+                                icon:"window.png",
+                                text:"window",
+                                URL:"https://in.pinterest.com/ideas/big-glass-windows/946407676282/"
+                            }
+                        },
+                        {
+                            pitch:2,
+                            yaw:-100,
+                            type:"scene",
+                            text:"go to bathroom",
+                            sceneId:"scene2"
+                        },
+                        {
+                            pitch:2,
+                            yaw:-113,
+                            type:"scene",
+                            text:"go to gaming room",
+                            sceneId:"scene5"
+                        }
+                    ]
+                },
+                scene2:{
+                    title:"bathroom",
+                    type:"equirectangular",
+                    panorama:"bathroom.webp",
+                    hotSpots:[
+                        {
+                            pitch:-38,
+                            yaw:-18,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"vase.png",
+                                text:"flower-vase",
+                                URL:"https://www.amazon.in/RelantaTM-Flower-Centerpieces-Kitchen-Wedding/dp/B0CNM2HCFG?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A3SH6D5TNVWSC5&th=1"
+                            }
+                        },
+                        {
+                            pitch:-10,
+                            yaw:-40,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"perfume.png",
+                                text:"perfume collection",
+                                URL:"https://www.amazon.in/Wild-Stone-Lasting-Refreshing-Fragrance/dp/B09B7QPCJS?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A15APWRK6P7LBV"
+                            }
+                        },
+                        {
+                            pitch:-38,
+                            yaw:40,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"wash-basin.png",
+                                text:"wash basin",
+                                URL:"https://www.flipkart.com/plantex-premium-ceramic-basin-wall-hung-wash-basin-bathroom-sink-handwash-wall/p/itm362a3ae9b7721?pid=WABHYFSTJKT5RKH2&lid=LSTWABHYFSTJKT5RKH2XQYRVG&marketplace=FLIPKART&cmpid=content_wash-basin_8965229628_gmc"
+                            }
+                        },
+                        {
+                            pitch:2,
+                            yaw:160,
+                            type:"scene",
+                            text:"go to previous room",
+                            sceneId:"scene1"
+                        }
+                    ]
+                },
+                scene3:{
+                    title:"living room",
+                    type:"equirectangular",
+                    panorama:"livingroom.jpeg",
+                    hotSpots:[
+                        {
+                            pitch:-5,
+                            yaw:-3,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"night-lamp.png",
+                                text:"table lamp",
+                                URL:"https://www.urbanladder.com/collection/table-lamps?srsltid=AfmBOorof84Wpr8xviyf6KuB28IDTNKq6ELNNEf4zsy-dOjaC0wJaEb1"
+                            }
+                        },
+                        {
+                            pitch:0,
+                            yaw:-40,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"cupboard.png",
+                                text:"cupboard",
+                                URL:"https://en.wikipedia.org/wiki/Cupboard"
+                            }
+                        },
+                        {
+                            pitch:0,
+                            yaw:40,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"window.png",
+                                text:"window",
+                                URL:"https://www.livspace.com/in/design-ideas/window-designs"
+                            }
+                        },
+                        {
+                            pitch:3,
+                            yaw:-51,
+                            type:"scene",
+                            text:"go to bedroom",
+                            sceneId:"scene1"
+                        },
+                        {
+                            pitch:-1,
+                            yaw:-46,
+                            type:"scene",
+                            text:"go to kitchen",
+                            sceneId:"scene4"
+                        }
+                    ]
+                },
+                scene4:{
+                    title:"kitchen",
+                    type:"equirectangular",
+                    panorama:"kitchen.webp",
+                    hotSpots:[
+                        {
+                            pitch:-5,
+                            yaw:0,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"television.png",
+                                text:"television",
+                                URL:"https://en.wikipedia.org/wiki/Television"
+                            }
+                        },
+                        {
+                            pitch:2,
+                            yaw:-48,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"starry-night.png",
+                                text:"canvas",
+                                URL:"https://in.pinterest.com/hajiradani315/wall-painting-design/"
+                            }
+                        },
+                        {
+                            pitch:-26,
+                            yaw:100,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"oven.png",
+                                text:"oven",
+                                URL:"https://en.wikipedia.org/wiki/Oven"
+                            }
+                        },
+                        {
+                            pitch:-3,
+                            yaw:50,
+                            type:"scene",
+                            text:"go to living room",
+                            sceneId:"scene3"
+                        }
+                    ]
+                },
+                scene5:{
+                    title:"gaming room",
+                    type:"equirectangular",
+                    panorama:"gameroom.webp",
+                    hotSpots:[
+                        {
+                            pitch:28,
+                            yaw:0,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"curved-monitor.png",
+                                text:"display",
+                                URL:"https://www.amazon.in/Monitors-Gaming-Computers-Accessories/s?rh=n%3A1375425031%2Cp_n_g-1002607111111%3A27179446031"
+                            }
+                        },
+                        {
+                            pitch:0,
+                            yaw:85,
+                            type:"scene",
+                            text:"go to living room",
+                            sceneId:"scene3"
+                        }
+                    ]
+                },
+            }
+        });
+                       
+        function customHotspot(hotSpotDiv, args){
+            var img= document.createElement('img');
+            img.src=args.icon;
+            img.style.width="40px";
+            img.style.height="40px";
+    
+            hotSpotDiv.appendChild(img);
+            hotSpotDiv.title=args.text;
+            hotSpotDiv.onclick=function(){
+                window.open(args.URL,"_blank");
+            };
+        }
+
+        function invisibleHotspots(hotSpotDiv,args){
+            hotSpotDiv.style.width=args.width + "px";  
+            hotSpotDiv.style.height=args.height + "px"; 
+            hotSpotDiv.style.background="transparent"; 
+            hotSpotDiv.title = args.text;
+           
+            hotSpotDiv.onclick=function(){
+                window.open(args.URL,"_blank");
+            };
+        }
+        </script>
+</body>
+</html>
