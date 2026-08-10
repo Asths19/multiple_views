@@ -25,10 +25,12 @@
     <script>
         pannellum.viewer('astha',{
             default:{
-                firstScene: "scene3",
+                firstScene: "scene5",
                 autoLoad: true,
                 autoRotate:-2,
                 showControls: false,
+                minHfov:10,
+                maxHfov:100,
             },
             scenes:{
                 scene1:{
@@ -234,6 +236,16 @@
                                 icon:"curved-monitor.png",
                                 text:"display",
                                 URL:"https://www.amazon.in/Monitors-Gaming-Computers-Accessories/s?rh=n%3A1375425031%2Cp_n_g-1002607111111%3A27179446031"
+                            }
+                        },
+                        {
+                            pitch:-20,
+                            yaw:25,
+                            createTooltipFunc:customHotspot,
+                            createTooltipArgs:{
+                                icon:"chair.png",
+                                text:"gaming chair",
+                                URL:"https://www.desertcart.in/products/768066400-gtplayer-gaming-chair-for-adults-ergonomic-video-game-chairs-footrest?gad_source=1&gad_campaignid=23077216304&gbraid=0AAAAACnLYYtGfXQbLdobp2eIiZR1Q9swE&gclid=Cj0KCQjw7eXTBhDBARIsAKF-w45_hZowH3gfg3I89sXo-3WbMcKELQxKLYF88BxOubXFnvnDWjV_YJ4aAsNHEALw_wcB"
                             }
                         },
                         {
